@@ -20,6 +20,7 @@ const Task3 = () => {
   return (
         <>
             <div className="container">
+            <h1>Task 3</h1>
             <div className="currentImage">
                 <img src={currentImage} alt="img" />
             </div>
@@ -29,7 +30,7 @@ const Task3 = () => {
                 ))}
             </div>
             
-                <h1>Showing {imgNumber} of {images.length} </h1>
+                <h3>Showing {imgNumber} of {images.length} </h3>
             </div>
             
         </>

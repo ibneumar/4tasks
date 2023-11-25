@@ -26,6 +26,7 @@ const Task1 = () => {
     return (
         <>
         <div className="container my-5">
+        <h1>Task 1</h1>
                 <nav className="navbar bg-body-tertiary">
         <div className="container-fluid">
           <span className="navbar-brand mb-0 h1">
