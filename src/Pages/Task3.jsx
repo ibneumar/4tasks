@@ -10,27 +10,53 @@ const Task3 = () => {
   ]);
 
   let  [currentImage, setCurrentImage] = useState("https://www.kfcpakistan.com/images/43a9fb50-ffaa-11ed-8180-812e571998fe-crunch-with-fries-and-drink-2023-05-31115706.png");
-  let [imgNumber, setImageNumber] = useState(1)
+  let [imgNumber, setImageNumber] = useState(1);
+  let [leftArrow, setLeftArrow] = useState(true)
+  let[rightArrow, setRightArrow] = useState(false)
     
 
   const handleImage = (index) => {
     setCurrentImage(images[index])
-    setImageNumber(index + 1)
+    setImages([...images])
+    setImageNumber(index + 1);
+    index === 0 ? setLeftArrow(true) : setLeftArrow(false)
+    index === images.length - 1 ? setRightArrow(true) : setRightArrow(false)
   }
+
+  const nextImage = () => {
+    let i = images.indexOf(currentImage) + 1;
+    handleImage(i)
+  }
+
+  const previousImage = () => {
+    let i = images.indexOf(currentImage) - 1;
+    handleImage(i)
+   
+  }
+
+
   return (
         <>
             <div className="container">
-            <h1>Task 3</h1>
-            <div className="currentImage">
-                <img src={currentImage} alt="img" />
-            </div>
-            <div className="imagesBox">
-                {images.map((img, index) => (
-                    <img onClick={(e) => handleImage(index)} src={img} key={index} alt={`img${index}`}/>
-                ))}
-            </div>
-            
-                <h3>Showing {imgNumber} of {images.length} </h3>
+                <div className="box">
+                    <h1>Task 3</h1>
+                    <div className="currentImage">
+                        <img src={currentImage} alt="img" />
+                    </div>
+                    <div className="imagesBox">
+                        {images.map((img, index) => {
+                            let border = img === currentImage ? "5px solid green" : "2px solid gray";
+                            return (
+                            <img style={{border}} onClick={() => handleImage(index)} src={img} key={index} alt="..." />
+                        )})}
+                    </div>
+                    
+                        <h3 style={{textAlign: 'center'}}>Showing {imgNumber} of {images.length} </h3>
+                        <div className="arrows">
+                            <button onClick={previousImage} disabled={leftArrow}>&#8678;</button>
+                            <button onClick={nextImage}  disabled={rightArrow}>&#8680;</button>
+                        </div>
+                </div>
             </div>
             
         </>

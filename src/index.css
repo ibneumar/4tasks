@@ -7,3 +7,15 @@
     margin: 5px;
     border: 1px solid gray;
 }
+
+.arrows {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 500px;
+   
+}
