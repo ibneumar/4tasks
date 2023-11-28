@@ -1,8 +1,7 @@
-import React, {useState} from "react";
+import React from "react";
 
-const Task1 = () => {
-    const [counter, setCounter] = useState(0);
-    const [total, setTotal] = useState(0)
+const Task1 = ({counter, setCounter, setTotal}) => {
+  
 
         let product = {
             id: 101,
@@ -17,34 +16,27 @@ const Task1 = () => {
             setTotal((counter + 1) * product.price);
         }
 
-        const handleReset = () => {
-            setCounter(0);
-            setTotal(0);
-        }
+        // const handleReset = () => {
+        //     setCounter(0);
+        //     setTotal(0);
+        // }
 
 
     return (
         <>
-        <div className="container my-5">
-        <h1>Task 1</h1>
-                <nav className="navbar bg-body-tertiary">
-        <div className="container-fluid">
-          <span className="navbar-brand mb-0 h1">
-           Cart : {counter} Items | Rs. {total}) </span>
+        <div className="section">
+        <div className="container">
+          <div className="card" style={{ width: "18rem"}}>
+            <img src={product.image} className="card-img-top" alt={product.title} />
+            <div className="card-body">
+              <h5 className="card-title"> {product.title} </h5>
+              <p className="card-text">{product.desc}</p>
+              <h5>Rs. {product.price}</h5>
+              <button className="btn btn-primary" onClick={handleAdd}>Add to Cart</button>
+            </div>
+          </div>
         </div>
-       </nav>
-
-      <div className="card" style={{ width: "18rem" }}>
-        <img src={product.image} className="card-img-top" alt={product.title} />
-         <div className="card-body">
-           <h5 className="card-title"> {product.title} </h5>
-          <p className="card-text">{product.desc}</p>
-          <h5>Rs. {product.price}</h5>
-           <button className="btn btn-primary" onClick={handleAdd}>Add to Cart</button>
-           <button style={{marginLeft: '10px'}} className="btn btn-primary" onClick={handleReset}>Reset Cart</button>
         </div>
-      </div>
-    </div>
         </>
     )
 }

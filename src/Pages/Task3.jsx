@@ -37,9 +37,8 @@ const Task3 = () => {
 
   return (
         <>
-            <div className="container">
+            
                 <div className="box">
-                    <h1>Task 3</h1>
                     <div className="currentImage">
                         <img src={currentImage} alt="img" />
                     </div>
@@ -57,7 +56,7 @@ const Task3 = () => {
                             <button onClick={nextImage}  disabled={rightArrow}>&#8680;</button>
                         </div>
                 </div>
-            </div>
+            
             
         </>
     )

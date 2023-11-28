@@ -16,23 +16,26 @@ const Task2 = () => {
         }
     return (
         <>
-            <div className="container my-5">
-            <h1>Task 2</h1>
-      <nav className="navbar bg-body-tertiary">
-          <div className="container-fluid">
-            <span className="navbar-brand mb-0 h1">
-             Status:: #Passing: {marks.filter(num => num >=50).length}, #Failing: {marks.filter(num => num < 50).length} </span>
-          </div>
-        </nav>
+        <div className="section brown">
+        <div className="container">
 
-       {marks.map((m, i) => {
-         return (
-           <div key={i}>
-           <button onClick={(e) => handleAdd(i)}> + </button> <span style={{color: m >= 50 ? 'green' : 'red'}}>{m}</span> <button  onClick={(e) => handleMinius(i)}> - </button>
-           </div>
-         )
-       })}
+        <div className="h3" style={{marginBottom: '20px', textAlign: 'center'}}>
+                      Passed {marks.filter(num => num >=50).length}, Failed: {marks.filter(num => num < 50).length} 
+        </div>
+          
+            <span style={{margin: '0 auto', display: 'table'}}>
+                    {marks.map((m, i) => {
+                      return (
+                          <div key={i} >
+                            <button style={{marginBottom:'5px'}} className="btn btn-primary" onClick={(e) => handleAdd(i)}> + </button> <span style={{color: m >= 50 ? 'green' : 'red'}}>{m}</span> <button style={{marginBottom:'5px'}} className="btn btn-warning"  onClick={(e) => handleMinius(i)}> - </button>
+                            <br />
+                        </div>
+                      )
+                    })}
+              </span>
+        </div>
      </div>
+     
         </>
     )
 }

@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React  from "react";
 
-const Task4 = () => {
+const Task4 = ({handleAdd}) => {
 
   let cards = [
     {
@@ -36,32 +36,13 @@ const Task4 = () => {
   ]
 
 
-  let [total, setTotal] = useState(0)
-  let [counter, setCounter] = useState(0)
-
-
-
-  const handleAdd = (price) => {
-    setTotal(total + price)
-    setCounter(counter + 1)
-  }
-
-  const resetCart = () => {
-    setTotal(0)
-    setCounter(0)
-  }
 
     return (
         <>
-            <div className="container my-5">
-            <h1>Task 4</h1>
-                <div className="container-fluid">
-                    <span className="navbar-brand mb-0 h1">
-                        <h3>Cart : {counter} Items | Rs. {total}</h3>
-                        <button onClick={resetCart} style={{margin: '10px'}} className="btn btn-primary" >Reset Cart</button>
-                    </span>
-                </div>
-                <div className="row row-cols-1 row-cols-md-3 g-4">
+            <div className="section">
+            <div className="container">
+                <h1 style={{marginBottom: "50px", textAlign: 'center'}}>Hot Deals</h1>
+                <div className="row row-cols-1 row-cols-md-4 g-5">
                 {cards.map((card, index ) => (
                     <div className="col" key={index}>
                     <div className="card">
@@ -77,6 +58,8 @@ const Task4 = () => {
                 ))}
                 </div>
             </div>
+            </div>
+            
         </>
     )
 }
