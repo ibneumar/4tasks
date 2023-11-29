@@ -30,7 +30,7 @@ const App = () => {
             
                 <Slider2 />
                 
-                <Task1  counter={counter} setCounter={setCounter} setTotal={setTotal} />
+                <Task1  counter={counter} setCounter={setCounter} setTotal={setTotal} handleAdd={handleAdd} />
                 
                 <Task2 />
             

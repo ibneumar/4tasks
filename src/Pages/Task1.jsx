@@ -1,6 +1,6 @@
 import React from "react";
 
-const Task1 = ({counter, setCounter, setTotal}) => {
+const Task1 = ({counter, setCounter, setTotal, handleAdd}) => {
   
 
         let product = {
@@ -11,10 +11,10 @@ const Task1 = ({counter, setCounter, setTotal}) => {
              price: 520,
         }
 
-        const handleAdd = () => {
-            setCounter(counter + 1);
-            setTotal((counter + 1) * product.price);
-        }
+        // const handleAdd = () => {
+        //     setCounter(counter + 1);
+        //     setTotal((counter + 1) * product.price);
+        // }
 
         // const handleReset = () => {
         //     setCounter(0);
@@ -32,7 +32,7 @@ const Task1 = ({counter, setCounter, setTotal}) => {
               <h5 className="card-title"> {product.title} </h5>
               <p className="card-text">{product.desc}</p>
               <h5>Rs. {product.price}</h5>
-              <button className="btn btn-primary" onClick={handleAdd}>Add to Cart</button>
+              <button className="btn btn-primary" onClick={() => handleAdd(product.price)}>Add to Cart</button>
             </div>
           </div>
         </div>
