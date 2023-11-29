@@ -87,10 +87,10 @@
 @media screen and (max-width: 990px) {
 
     .navbar-nav {
-        justify-content: left;
-        align-items: flex-start;
+        justify-content: center;
+        align-items: center;
         flex-direction: row;
-        gap: 50px;
+        gap: 20px;
     }
 
     .card {
