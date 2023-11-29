@@ -42,7 +42,7 @@ const Task4 = ({handleAdd}) => {
             <div className="section">
             <div className="container">
                 <h1 style={{marginBottom: "50px", textAlign: 'center'}}>Hot Deals</h1>
-                <div className="row row-cols-1 row-cols-md-4 g-5">
+                <div className="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-5">
                 {cards.map((card, index ) => (
                     <div className="col" key={index}>
                     <div className="card">

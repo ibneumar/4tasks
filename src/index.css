@@ -91,4 +91,8 @@
         align-items: flex-start;
     }
 
+    .card {
+        height: 480px !important;
+    }
+
 }
