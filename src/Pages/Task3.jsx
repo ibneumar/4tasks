@@ -37,27 +37,24 @@ const Task3 = () => {
 
   return (
         <>
-            
-                <div className="box">
-                    <div className="currentImage">
-                        <img src={currentImage} alt="img" />
-                    </div>
-                    <div className="imagesBox">
-                        {images.map((img, index) => {
-                            let border = img === currentImage ? "5px solid green" : "2px solid gray";
-                            return (
-                            <img style={{border}} onClick={() => handleImage(index)} src={img} key={index} alt="..." />
-                        )})}
-                    </div>
-                    
-                        <h3 style={{textAlign: 'center'}}>Showing {imgNumber} of {images.length} </h3>
-                        <div className="arrows">
-                            <button onClick={previousImage} disabled={leftArrow}>&#8678;</button>
-                            <button onClick={nextImage}  disabled={rightArrow}>&#8680;</button>
-                        </div>
+            <div className="box">
+                <div className="currentImage">
+                    <img src={currentImage} alt="img" />
                 </div>
-            
-            
+                <div className="imagesBox">
+                    {images.map((img, index) => {
+                        let border = img === currentImage ? "5px solid green" : "2px solid gray";
+                        return (
+                        <img style={{border}} onClick={() => handleImage(index)} src={img} key={index} alt="..." />
+                    )})}
+                </div>
+                
+                    <h3 style={{textAlign: 'center'}}>Showing {imgNumber} of {images.length} </h3>
+                    <div className="arrows">
+                        <button onClick={previousImage} disabled={leftArrow}>&#8678;</button>
+                        <button onClick={nextImage}  disabled={rightArrow}>&#8680;</button>
+                    </div>
+            </div>
         </>
     )
 }

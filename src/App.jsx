@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Header from './Pages/Header';
-import Slider2 from './Pages/Slider2';
+import Slider from './Pages/Slider2';
 import Task1 from './Pages/Task1';
 import Task2 from './Pages/Task2';
 import Task3 from './Pages/Task3';
@@ -26,15 +26,16 @@ const App = () => {
     return (
         <>
            
-            <Header counter={counter}  total={total} resetCart={resetCart}/>
+                <Header counter={counter}  total={total} resetCart={resetCart}/>
             
-                <Slider2 />
+                <Slider />
                 
-                <Task1  counter={counter} setCounter={setCounter} setTotal={setTotal} handleAdd={handleAdd} />
+                <Task1 setCounter={setCounter} setTotal={setTotal} handleAdd={handleAdd} />
                 
                 <Task2 />
+                <Task3 />
             
-                <Task4 handleAdd={handleAdd} resetCart={resetCart} />
+                <Task4 handleAdd={handleAdd} />
             
 
             <Footer />

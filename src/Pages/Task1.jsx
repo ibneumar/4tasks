@@ -1,6 +1,6 @@
 import React from "react";
 
-const Task1 = ({counter, setCounter, setTotal, handleAdd}) => {
+const Task1 = ({handleAdd}) => {
   
 
         let product = {
@@ -10,17 +10,6 @@ const Task1 = ({counter, setCounter, setTotal, handleAdd}) => {
              image:"https://www.kfcpakistan.com/images/43a9fb50-ffaa-11ed-8180-812e571998fe-crunch-with-fries-and-drink-2023-05-31115706.png",
              price: 520,
         }
-
-        // const handleAdd = () => {
-        //     setCounter(counter + 1);
-        //     setTotal((counter + 1) * product.price);
-        // }
-
-        // const handleReset = () => {
-        //     setCounter(0);
-        //     setTotal(0);
-        // }
-
 
     return (
         <>
