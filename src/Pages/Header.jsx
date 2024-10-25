@@ -5,7 +5,7 @@ const Header = ({counter, total, resetCart}) => {
         <>
             <nav className="navbar navbar-expand-lg sticky-top bg-primary">
                 <div className="container">
-                    <a className="navbar-brand text-light" href="#"><i className="bi bi-shop fz-30"></i> Store</a>
+                    <a className="navbar-brand text-light" href="#"><i className="bi bi-shop fz-30"></i> Gulshan Store</a>
                     {/* <button className="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button> */}
